@@ -15,7 +15,7 @@
       {% if showForm %}
         <form action="/submit" method="POST">
           <label for="name_field">Name:</label>
-          <input name="name" type="text" id="name_field" />
+          <input name="name" type="text" id="name_field" value="{{ name }}"/>
 
           <label for="text_field">Text:</label>
           <input name="text" type="text" id="text_field" style="width: 350px;" />
@@ -26,7 +26,7 @@
       <h3>All Tweets</h3>
       <!-- display tweets here -->
       <div class="">
-        <ul class="list-group">
+        <ul class="list-group" id="tweet-list">
           {% for tweet in tweets %}
             <li class="list-group-item tweets">
               <div class="box">

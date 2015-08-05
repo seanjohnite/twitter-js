@@ -6,6 +6,7 @@ var id = 1;
 var add = function (name, text) {
   data.push({ name: name, text: text, id: id.toString()});
   id++;
+  return id - 1;
 };
 
 var list = function () {
