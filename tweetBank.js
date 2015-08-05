@@ -1,9 +1,11 @@
 var _ = require("underscore");
 
 var data = [];
+var id = 1;
 
 var add = function (name, text) {
-  data.push({ name: name, text: text });
+  data.push({ name: name, text: text, id: id.toString()});
+  id++;
 };
 
 var list = function () {
@@ -36,7 +38,9 @@ for(var i=0; i<10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
 
+module.exports.add("Charlotte", "This is poopy. #poop");
+
 //console.log(data);
 //console.log(module.exports.list());
-// module.exports.add("sean", "#awesome");
+
 // console.log(module.exports.find({name: "sean"}));
