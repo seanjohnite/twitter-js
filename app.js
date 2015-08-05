@@ -19,7 +19,7 @@ app.set('views', __dirname + '/views')
 // at end because log needs response
 app.use(function(request, response, next) {
 
-  var people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
+  var people = [{name: 'Full'}, {name: 'peoooep'}, {name: 'Son'}];
   response.render( 'index', {title: 'Hall of Fame', people: people} );
 
   console.log(chalk.bold.red(request.method) + 
